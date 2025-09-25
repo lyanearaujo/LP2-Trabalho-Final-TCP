@@ -13,15 +13,14 @@ class ClientHandler : public std::enable_shared_from_this<ClientHandler>
         ClientHandler(int socket, ChatRoom& room);
         ~ClientHandler();
 
-        void startHandling(); // Inicia o loop de leitura de mensagens do cliente
-        void sendMessage(const std::string& message); // Envia uma mensagem para este cliente
+        void startHandling();
+        void sendMessage(const std::string& message);
         int getSocket() const;
 
     private:
-        void handleMessages(); // O método que rodará na thread
-
+        void handleMessages(); 
         int clientSocket;
-        ChatRoom& chatRoom; // Referência para a sala de chat
+        ChatRoom& chatRoom; 
         std::string username;
 };
 

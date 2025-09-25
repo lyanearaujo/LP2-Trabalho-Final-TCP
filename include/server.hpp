@@ -13,13 +13,13 @@ class Server
         void start();
 
     private:
-        void setup(); // configura o socket
-        void acceptConnections(); // aceita novos clientes
+        void setup();
+        void acceptConnections();
 
         int port;
         int serverSocket;
         struct sockaddr_in serverAddr;
-        ChatRoom chatroom; //o servidor "possui" a sala de chat
+        ChatRoom chatroom;
 };
 
 #endif
