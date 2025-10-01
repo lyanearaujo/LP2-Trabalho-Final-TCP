@@ -129,12 +129,111 @@ test_logger/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/build
 .PHONY : test_logger/fast
 
+#=============================================================================
+# Target rules for targets named chat_server
+
+# Build rule for target.
+chat_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chat_server
+.PHONY : chat_server
+
+# fast build rule for target.
+chat_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/build
+.PHONY : chat_server/fast
+
+#=============================================================================
+# Target rules for targets named chat_client
+
+# Build rule for target.
+chat_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chat_client
+.PHONY : chat_client
+
+# fast build rule for target.
+chat_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/build
+.PHONY : chat_client/fast
+
+src/chatroom.o: src/chatroom.cpp.o
+.PHONY : src/chatroom.o
+
+# target to build an object file
+src/chatroom.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/chatroom.cpp.o
+.PHONY : src/chatroom.cpp.o
+
+src/chatroom.i: src/chatroom.cpp.i
+.PHONY : src/chatroom.i
+
+# target to preprocess a source file
+src/chatroom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/chatroom.cpp.i
+.PHONY : src/chatroom.cpp.i
+
+src/chatroom.s: src/chatroom.cpp.s
+.PHONY : src/chatroom.s
+
+# target to generate assembly for a file
+src/chatroom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/chatroom.cpp.s
+.PHONY : src/chatroom.cpp.s
+
+src/client_main.o: src/client_main.cpp.o
+.PHONY : src/client_main.o
+
+# target to build an object file
+src/client_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/src/client_main.cpp.o
+.PHONY : src/client_main.cpp.o
+
+src/client_main.i: src/client_main.cpp.i
+.PHONY : src/client_main.i
+
+# target to preprocess a source file
+src/client_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/src/client_main.cpp.i
+.PHONY : src/client_main.cpp.i
+
+src/client_main.s: src/client_main.cpp.s
+.PHONY : src/client_main.s
+
+# target to generate assembly for a file
+src/client_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/src/client_main.cpp.s
+.PHONY : src/client_main.cpp.s
+
+src/clienthandler.o: src/clienthandler.cpp.o
+.PHONY : src/clienthandler.o
+
+# target to build an object file
+src/clienthandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/clienthandler.cpp.o
+.PHONY : src/clienthandler.cpp.o
+
+src/clienthandler.i: src/clienthandler.cpp.i
+.PHONY : src/clienthandler.i
+
+# target to preprocess a source file
+src/clienthandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/clienthandler.cpp.i
+.PHONY : src/clienthandler.cpp.i
+
+src/clienthandler.s: src/clienthandler.cpp.s
+.PHONY : src/clienthandler.s
+
+# target to generate assembly for a file
+src/clienthandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/clienthandler.cpp.s
+.PHONY : src/clienthandler.cpp.s
+
 src/logger.o: src/logger.cpp.o
 .PHONY : src/logger.o
 
 # target to build an object file
 src/logger.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/logger.cpp.o
 .PHONY : src/logger.cpp.o
 
 src/logger.i: src/logger.cpp.i
@@ -143,6 +242,7 @@ src/logger.i: src/logger.cpp.i
 # target to preprocess a source file
 src/logger.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/logger.cpp.i
 .PHONY : src/logger.cpp.i
 
 src/logger.s: src/logger.cpp.s
@@ -151,31 +251,80 @@ src/logger.s: src/logger.cpp.s
 # target to generate assembly for a file
 src/logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/logger.cpp.s
 .PHONY : src/logger.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/server.o: src/server.cpp.o
+.PHONY : src/server.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server.cpp.o
+.PHONY : src/server.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/server.i: src/server.cpp.i
+.PHONY : src/server.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server.cpp.i
+.PHONY : src/server.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/server.s: src/server.cpp.s
+.PHONY : src/server.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server.cpp.s
+.PHONY : src/server.cpp.s
+
+src/server_main.o: src/server_main.cpp.o
+.PHONY : src/server_main.o
+
+# target to build an object file
+src/server_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server_main.cpp.o
+.PHONY : src/server_main.cpp.o
+
+src/server_main.i: src/server_main.cpp.i
+.PHONY : src/server_main.i
+
+# target to preprocess a source file
+src/server_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server_main.cpp.i
+.PHONY : src/server_main.cpp.i
+
+src/server_main.s: src/server_main.cpp.s
+.PHONY : src/server_main.s
+
+# target to generate assembly for a file
+src/server_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/src/server_main.cpp.s
+.PHONY : src/server_main.cpp.s
+
+src/test_logger.o: src/test_logger.cpp.o
+.PHONY : src/test_logger.o
+
+# target to build an object file
+src/test_logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/test_logger.cpp.o
+.PHONY : src/test_logger.cpp.o
+
+src/test_logger.i: src/test_logger.cpp.i
+.PHONY : src/test_logger.i
+
+# target to preprocess a source file
+src/test_logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/test_logger.cpp.i
+.PHONY : src/test_logger.cpp.i
+
+src/test_logger.s: src/test_logger.cpp.s
+.PHONY : src/test_logger.s
+
+# target to generate assembly for a file
+src/test_logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/src/test_logger.cpp.s
+.PHONY : src/test_logger.cpp.s
 
 # Help Target
 help:
@@ -185,13 +334,30 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... chat_client"
+	@echo "... chat_server"
 	@echo "... test_logger"
+	@echo "... src/chatroom.o"
+	@echo "... src/chatroom.i"
+	@echo "... src/chatroom.s"
+	@echo "... src/client_main.o"
+	@echo "... src/client_main.i"
+	@echo "... src/client_main.s"
+	@echo "... src/clienthandler.o"
+	@echo "... src/clienthandler.i"
+	@echo "... src/clienthandler.s"
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/server.o"
+	@echo "... src/server.i"
+	@echo "... src/server.s"
+	@echo "... src/server_main.o"
+	@echo "... src/server_main.i"
+	@echo "... src/server_main.s"
+	@echo "... src/test_logger.o"
+	@echo "... src/test_logger.i"
+	@echo "... src/test_logger.s"
 .PHONY : help
 
 

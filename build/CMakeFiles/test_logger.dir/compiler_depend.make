@@ -210,7 +210,7 @@ CMakeFiles/test_logger.dir/src/logger.cpp.o: ../src/logger.cpp \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc
 
-CMakeFiles/test_logger.dir/src/main.cpp.o: ../src/main.cpp \
+CMakeFiles/test_logger.dir/src/test_logger.cpp.o: ../src/test_logger.cpp \
   /usr/include/stdc-predef.h \
   /usr/include/c++/11/iostream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -441,7 +441,7 @@ CMakeFiles/test_logger.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/std_thread.h:
 
-../src/main.cpp:
+../src/test_logger.cpp:
 
 /usr/include/c++/11/sstream:
 

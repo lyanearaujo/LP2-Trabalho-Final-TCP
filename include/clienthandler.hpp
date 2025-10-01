@@ -7,6 +7,7 @@
 
 class ChatRoom; 
 
+// representação de cliente conectado ao servidor
 class ClientHandler : public std::enable_shared_from_this<ClientHandler>
 {
     public:
@@ -21,7 +22,7 @@ class ClientHandler : public std::enable_shared_from_this<ClientHandler>
         void handleMessages(); 
         int clientSocket;
         ChatRoom& chatRoom; 
-        std::string username;
+        std::string username; 
 };
 
 #endif 

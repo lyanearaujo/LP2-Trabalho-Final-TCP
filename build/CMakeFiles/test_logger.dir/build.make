@@ -69,19 +69,19 @@ include CMakeFiles/test_logger.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_logger.dir/flags.make
 
-CMakeFiles/test_logger.dir/src/main.cpp.o: CMakeFiles/test_logger.dir/flags.make
-CMakeFiles/test_logger.dir/src/main.cpp.o: ../src/main.cpp
-CMakeFiles/test_logger.dir/src/main.cpp.o: CMakeFiles/test_logger.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_logger.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_logger.dir/src/main.cpp.o -MF CMakeFiles/test_logger.dir/src/main.cpp.o.d -o CMakeFiles/test_logger.dir/src/main.cpp.o -c /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/main.cpp
+CMakeFiles/test_logger.dir/src/test_logger.cpp.o: CMakeFiles/test_logger.dir/flags.make
+CMakeFiles/test_logger.dir/src/test_logger.cpp.o: ../src/test_logger.cpp
+CMakeFiles/test_logger.dir/src/test_logger.cpp.o: CMakeFiles/test_logger.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_logger.dir/src/test_logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_logger.dir/src/test_logger.cpp.o -MF CMakeFiles/test_logger.dir/src/test_logger.cpp.o.d -o CMakeFiles/test_logger.dir/src/test_logger.cpp.o -c /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/test_logger.cpp
 
-CMakeFiles/test_logger.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_logger.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/main.cpp > CMakeFiles/test_logger.dir/src/main.cpp.i
+CMakeFiles/test_logger.dir/src/test_logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_logger.dir/src/test_logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/test_logger.cpp > CMakeFiles/test_logger.dir/src/test_logger.cpp.i
 
-CMakeFiles/test_logger.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_logger.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/main.cpp -o CMakeFiles/test_logger.dir/src/main.cpp.s
+CMakeFiles/test_logger.dir/src/test_logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_logger.dir/src/test_logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/test_logger.cpp -o CMakeFiles/test_logger.dir/src/test_logger.cpp.s
 
 CMakeFiles/test_logger.dir/src/logger.cpp.o: CMakeFiles/test_logger.dir/flags.make
 CMakeFiles/test_logger.dir/src/logger.cpp.o: ../src/logger.cpp
@@ -99,13 +99,13 @@ CMakeFiles/test_logger.dir/src/logger.cpp.s: cmake_force
 
 # Object files for target test_logger
 test_logger_OBJECTS = \
-"CMakeFiles/test_logger.dir/src/main.cpp.o" \
+"CMakeFiles/test_logger.dir/src/test_logger.cpp.o" \
 "CMakeFiles/test_logger.dir/src/logger.cpp.o"
 
 # External object files for target test_logger
 test_logger_EXTERNAL_OBJECTS =
 
-test_logger: CMakeFiles/test_logger.dir/src/main.cpp.o
+test_logger: CMakeFiles/test_logger.dir/src/test_logger.cpp.o
 test_logger: CMakeFiles/test_logger.dir/src/logger.cpp.o
 test_logger: CMakeFiles/test_logger.dir/build.make
 test_logger: CMakeFiles/test_logger.dir/link.txt

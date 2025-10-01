@@ -4,6 +4,7 @@
 #include "chatroom.hpp"
 #include <netinet/in.h>
 
+// classe principal do servidor
 class Server
 {
     public:
@@ -19,7 +20,7 @@ class Server
         int port;
         int serverSocket;
         struct sockaddr_in serverAddr;
-        ChatRoom chatroom;
+        ChatRoom chatroom; // cada servidor tem uma sala
 };
 
 #endif

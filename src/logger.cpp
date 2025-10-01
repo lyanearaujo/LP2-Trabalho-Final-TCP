@@ -2,17 +2,18 @@
 
 Logger& Logger::getInstance()
 {
-    static Logger instance;
+    static Logger instance; // singleton
     return instance;
 }
 
 void Logger::log(LogLevel level, const std::string& message)
 {
-    std::lock_guard<std::mutex> guard(logMutex); 
+    std::lock_guard<std::mutex> guard(logMutex); // evita race condition no log
 
     auto now = std::chrono::system_clock::now();
     auto time_t_now = std::chrono::system_clock::to_time_t(now);
     
+    // imprime log com timestamp e nível
     std::cout << "[" << std::put_time(std::localtime(&time_t_now), "%Y-%m-%d %H:%M:%S") << "] "
               << "[" << levelToString(level) << "]: "
               << message << std::endl;

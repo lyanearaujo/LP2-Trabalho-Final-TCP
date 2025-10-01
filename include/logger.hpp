@@ -7,6 +7,7 @@
 #include <chrono>   
 #include <iomanip>  
 
+// níveis de log (p/ debug)
 enum class LogLevel
 {
     INFO,
@@ -14,6 +15,7 @@ enum class LogLevel
     ERROR
 };
 
+// logger simples em formato de singleton
 class Logger
 {
     public:
@@ -26,8 +28,8 @@ class Logger
 
     private:
         Logger() {}
-        std::mutex logMutex;
-        std::string levelToString(LogLevel level);
+        std::mutex logMutex; // evita conflito de escrita
+        std::string levelToString(LogLevel level); // converte enum em string
 };
 
 #endif

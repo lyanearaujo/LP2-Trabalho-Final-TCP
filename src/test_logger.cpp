@@ -8,6 +8,7 @@ void log_worker(int threadId)
 {
     for (int i = 0; i < 20; ++i)
     {
+        // cada thread gera logs com seu id
         std::string message = "Thread " + std::to_string(threadId) + " registrando a mensagem " + std::to_string(i);
         Logger::getInstance().log(LogLevel::INFO, message);
     }
@@ -15,24 +16,25 @@ void log_worker(int threadId)
 
 int main()
 {
-    Logger::getInstance().log(LogLevel::INFO, "Teste de log iniciado");
+    Logger::getInstance().log(LogLevel::INFO, "Teste de log iniciado! :)");
 
     const int NUM_THREADS = 10;
     std::vector<std::thread> threads;
 
+    // cria várias threads que geram logs em paralelo
     for (int i = 0; i < NUM_THREADS; ++i)
     {
         threads.emplace_back(log_worker, i);
     }
 
-    Logger::getInstance().log(LogLevel::INFO, "Todas as " + std::to_string(NUM_THREADS) + " threads foram criadas/iniciadas");
+    Logger::getInstance().log(LogLevel::INFO, "Todas as " + std::to_string(NUM_THREADS) + " threads foram criadas/iniciadas. Ebaa! :D");
 
     for (auto& t : threads)
     {
-        t.join();
+        t.join(); // espera todas finalizarem
     }
 
-    Logger::getInstance().log(LogLevel::ERROR, "Todas as threads concluiram");
+    Logger::getInstance().log(LogLevel::ERROR, "Todas as threads concluiram! :)");
 
     return 0;
 }

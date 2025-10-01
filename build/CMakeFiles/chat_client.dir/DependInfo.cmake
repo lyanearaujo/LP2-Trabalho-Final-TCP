@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/logger.cpp" "CMakeFiles/test_logger.dir/src/logger.cpp.o" "gcc" "CMakeFiles/test_logger.dir/src/logger.cpp.o.d"
-  "/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/test_logger.cpp" "CMakeFiles/test_logger.dir/src/test_logger.cpp.o" "gcc" "CMakeFiles/test_logger.dir/src/test_logger.cpp.o.d"
+  "/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/client_main.cpp" "CMakeFiles/chat_client.dir/src/client_main.cpp.o" "gcc" "CMakeFiles/chat_client.dir/src/client_main.cpp.o.d"
   )
 
 # Targets to which this target links.

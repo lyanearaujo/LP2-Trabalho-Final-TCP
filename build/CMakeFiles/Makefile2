@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build
 
 # The main recursive "all" target.
 all: CMakeFiles/test_logger.dir/all
+all: CMakeFiles/chat_server.dir/all
+all: CMakeFiles/chat_client.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +74,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/test_logger.dir/clean
+clean: CMakeFiles/chat_server.dir/clean
+clean: CMakeFiles/chat_client.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,7 +85,7 @@ clean: CMakeFiles/test_logger.dir/clean
 CMakeFiles/test_logger.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles --progress-num=1,2,3 "Built target test_logger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles --progress-num=9,10,11 "Built target test_logger"
 .PHONY : CMakeFiles/test_logger.dir/all
 
 # Build rule for subdir invocation for target.
@@ -99,6 +103,58 @@ test_logger: CMakeFiles/test_logger.dir/rule
 CMakeFiles/test_logger.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_logger.dir/build.make CMakeFiles/test_logger.dir/clean
 .PHONY : CMakeFiles/test_logger.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/chat_server.dir
+
+# All Build rule for target.
+CMakeFiles/chat_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target chat_server"
+.PHONY : CMakeFiles/chat_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/chat_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/chat_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles 0
+.PHONY : CMakeFiles/chat_server.dir/rule
+
+# Convenience name for target.
+chat_server: CMakeFiles/chat_server.dir/rule
+.PHONY : chat_server
+
+# clean rule for target.
+CMakeFiles/chat_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_server.dir/build.make CMakeFiles/chat_server.dir/clean
+.PHONY : CMakeFiles/chat_server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/chat_client.dir
+
+# All Build rule for target.
+CMakeFiles/chat_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles --progress-num=1,2 "Built target chat_client"
+.PHONY : CMakeFiles/chat_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/chat_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/chat_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles 0
+.PHONY : CMakeFiles/chat_client.dir/rule
+
+# Convenience name for target.
+chat_client: CMakeFiles/chat_client.dir/rule
+.PHONY : chat_client
+
+# clean rule for target.
+CMakeFiles/chat_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat_client.dir/build.make CMakeFiles/chat_client.dir/clean
+.PHONY : CMakeFiles/chat_client.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

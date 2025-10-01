@@ -211,8 +211,8 @@ CMakeFiles/test_logger.dir/src/logger.cpp.o
  /usr/include/c++/11/sstream
  /usr/include/c++/11/bits/sstream.tcc
 
-CMakeFiles/test_logger.dir/src/main.cpp.o
- /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/main.cpp
+CMakeFiles/test_logger.dir/src/test_logger.cpp.o
+ /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/src/test_logger.cpp
  /usr/include/stdc-predef.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h

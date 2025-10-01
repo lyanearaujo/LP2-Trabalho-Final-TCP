@@ -1,3 +1,5 @@
 /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles/test_logger.dir
+/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles/chat_server.dir
+/home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles/chat_client.dir
 /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles/edit_cache.dir
 /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/build/CMakeFiles/rebuild_cache.dir
