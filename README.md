@@ -3,9 +3,10 @@
 ## Principais Funcionalidades
 1. **Servidor Concorrente:** Capaz de lidar com múltiplos clientes simultaneamente, cada um em sua própria thread.
 2. **Broadcast de Mensagens:** Mensagens são retransmitidas em tempo real para todos os usuários na sala.
-3. **Histórico de Mensagens:** Novos usuários recebem as últimas 15 mensagens do chat assim que se conectam.
-4. **Logging Thread-Safe:** Todos os eventos importantes do servidor são registrados de forma segura usando uma biblioteca de log customizada.
-5. **Script de Teste:** Um script (`test_multiple_clients.sh`) para simular múltiplos usuários de forma automática.
+3. **Filtro de Mensagens:** Mensagens que contem palavras indevidas serão censuradas para todos os outros clientes.
+4. **Histórico de Mensagens:** Novos usuários recebem as últimas 15 mensagens do chat assim que se conectam.
+5. **Logging Thread-Safe:** Todos os eventos importantes do servidor são registrados de forma segura usando uma biblioteca de log customizada.
+6. **Script de Teste:** Um script (`test_multiple_clients.sh`) para simular múltiplos usuários de forma automática.
 
 ## Como Compilar:
 O projeto utiliza CMake. Para compilar, execute os seguintes comandos a partir da raiz do projeto:
