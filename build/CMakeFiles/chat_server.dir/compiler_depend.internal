@@ -199,6 +199,9 @@ CMakeFiles/chat_server.dir/src/chatroom.cpp.o
  /usr/include/c++/11/backward/auto_ptr.h
  /usr/include/c++/11/pstl/glue_memory_defs.h
  /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/deque
+ /usr/include/c++/11/bits/stl_deque.h
+ /usr/include/c++/11/bits/deque.tcc
  /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/include/clienthandler.hpp
  /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/include/chatroom.hpp
  /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/include/logger.hpp
@@ -450,6 +453,9 @@ CMakeFiles/chat_server.dir/src/clienthandler.cpp.o
  /usr/include/c++/11/backward/auto_ptr.h
  /usr/include/c++/11/pstl/glue_memory_defs.h
  /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/deque
+ /usr/include/c++/11/bits/stl_deque.h
+ /usr/include/c++/11/bits/deque.tcc
  /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/include/logger.hpp
  /usr/include/c++/11/iostream
  /usr/include/c++/11/ostream
@@ -925,6 +931,9 @@ CMakeFiles/chat_server.dir/src/server.cpp.o
  /usr/include/c++/11/backward/auto_ptr.h
  /usr/include/c++/11/pstl/glue_memory_defs.h
  /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/deque
+ /usr/include/c++/11/bits/stl_deque.h
+ /usr/include/c++/11/bits/deque.tcc
  /usr/include/netinet/in.h
  /usr/include/x86_64-linux-gnu/sys/socket.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
@@ -1190,6 +1199,9 @@ CMakeFiles/chat_server.dir/src/server_main.cpp.o
  /usr/include/c++/11/backward/auto_ptr.h
  /usr/include/c++/11/pstl/glue_memory_defs.h
  /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/deque
+ /usr/include/c++/11/bits/stl_deque.h
+ /usr/include/c++/11/bits/deque.tcc
  /usr/include/netinet/in.h
  /usr/include/x86_64-linux-gnu/sys/socket.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h

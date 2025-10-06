@@ -1,47 +1,44 @@
 # Trabalho Final LP2
 
-## Compilar:
+## Principais Funcionalidades
+1. **Servidor Concorrente:** Capaz de lidar com múltiplos clientes simultaneamente, cada um em sua própria thread.
+2. **Broadcast de Mensagens:** Mensagens são retransmitidas em tempo real para todos os usuários na sala.
+3. **Histórico de Mensagens:** Novos usuários recebem as últimas 15 mensagens do chat assim que se conectam.
+4. **Logging Thread-Safe:** Todos os eventos importantes do servidor são registrados de forma segura usando uma biblioteca de log customizada.
+5. **Script de Teste:** Um script (`test_multiple_clients.sh`) para simular múltiplos usuários de forma automática.
+
+## Como Compilar:
+O projeto utiliza CMake. Para compilar, execute os seguintes comandos a partir da raiz do projeto:
 ```
+cd /build
+make clean
 make
 ```
+Isso irá gerar os executáveis `chat_server` e `chat_client` no diretório `build/`
 
-## Etapa 1: Teste de biblioteca de Log
+## Como Executar
+Você precisará de pelo menos dois terminais.
 
-### Executar:
+### 1. Inicie o Servidor:
+Em um terminal, execute o servidor. Ele ficará aguardando conexões.
+```
+cd /build
+./chat_server
+```
+
+### 2. Inicie os Clientes:
+Para simular a conversa, você pode usar o script de teste que abre 3 clientes automaticamente.
+```
+# Na pasta raiz, dê permissão ao script (só na primeira vez)
+chmod +x test_multiple_clients.sh
+
+# Em outro terminal, execute o script
+./test_multiple_clients.sh
+```
+
+### Teste da Biblioteca de Log
+Para executar o teste de concorrência da biblioteca de logging (desenvolvida na Etapa 1), use o comando:
 ```
 cd /build
 ./test_logger
 ```
-**O que esperar:**
-O programa irá mostrar no console mensagens de 10 threads.
-As mensagens aparecerão misturadas, mas cada linha estará completa e sem erros.
-
-## Etapa 2: Protótipo Cliente/Servidor de Chat
-
-### Executar:
-
-#### 1. Inicie o servidor em um terminal:
-```
-# Estando na pasta 'build'
-./chat_server
-```
-
-#### 2. Inicie os clientes em outro terminal:
-
-**Opção A:** com o script (recomendado)
-
-O scrip abre 3 clientes automaticamente.
-```
-# Estando na pasta raiz, dê permissão ao script (só na 1º vez)
-chmod +x test_multiple_clients.sh
-
-# Execute o script:
-./test_multiple_clients.sh
-```
-**Opção B:** manualmente
-```
-# Estando na pasta 'build'
-./chat_client
-```
-
-**O que esperar:** Com o script, vão ser abertos 3 clientes *(terminais)* automaticamente. Para testar o chat, fique à vontade em mandar qualquer mensagem para ver os clientes "conversando" entre si. Sem o script, terá que abrir um por um pelo comando acima.
