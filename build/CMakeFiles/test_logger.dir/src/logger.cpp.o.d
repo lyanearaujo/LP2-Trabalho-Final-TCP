@@ -165,4 +165,5 @@ CMakeFiles/test_logger.dir/src/logger.cpp.o: \
  /usr/include/c++/11/bits/locale_conv.h \
  /usr/include/c++/11/bits/unique_ptr.h \
  /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc
+ /usr/include/c++/11/bits/sstream.tcc \
+ /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/include/colors.hpp

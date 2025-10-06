@@ -13,6 +13,7 @@ class ClientHandler;
 class ChatRoom
 {
     public:
+        ChatRoom();
         void addClient(std::shared_ptr<ClientHandler> client);
         void removeClient(std::shared_ptr<ClientHandler> client);
     
@@ -28,6 +29,10 @@ class ChatRoom
 
         std::deque<std::string> messageHistory;
         std::mutex historyMutex; // garante acesso seguro ao histórico de mensagens acima
+
+        // filtro de mensagens proibidas
+        std::vector<std::string> forbiddenWords;
+        std::string filterMessage(const std::string& message);
 };
 
 #endif

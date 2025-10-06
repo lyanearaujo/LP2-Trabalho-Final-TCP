@@ -11,6 +11,7 @@ find_package(Threads REQUIRED)
 add_executable(test_logger 
     src/test_logger.cpp 
     src/logger.cpp
+    include/colors.hpp
 )
 target_link_libraries(test_logger PRIVATE Threads::Threads)
 
@@ -20,11 +21,13 @@ add_executable(chat_server
     src/clienthandler.cpp
     src/chatroom.cpp      
     src/logger.cpp
+    include/colors.hpp
 )
 target_link_libraries(chat_server PRIVATE Threads::Threads)
 
 add_executable(chat_client
     src/client_main.cpp
+    include/colors.hpp
 )
 target_link_libraries(chat_client PRIVATE Threads::Threads)
 

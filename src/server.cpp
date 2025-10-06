@@ -55,8 +55,6 @@ void Server::start()
         throw std::runtime_error("Ops, não consegui colocar o servidor em modo de escuta. :/");
     }
 
-    Logger::getInstance().log(LogLevel::INFO, "Servidor escutando por novas conexoes, só um momentinho...");
-
     acceptConnections(); // loop infinito de conexões
 }
 
@@ -70,7 +68,6 @@ void Server::acceptConnections()
             Logger::getInstance().log(LogLevel::ERROR, "Opa, não consegui aceitar nova conexao. :/");
             continue; 
         }
-        Logger::getInstance().log(LogLevel::INFO, "Novo cliente conectado! Oii, Socket: " + std::to_string(clientSocket));
 
         // cria handler para o cliente e o adiciona ao chatroom
         auto clientHandler = std::make_shared<ClientHandler>(clientSocket, chatroom);

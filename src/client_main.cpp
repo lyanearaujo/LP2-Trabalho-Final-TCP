@@ -6,6 +6,7 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <cstring>
+#include "colors.hpp"
 
 void receive_messages(int clientSocket)
 {
@@ -17,7 +18,7 @@ void receive_messages(int clientSocket)
         
         if (bytesReceived <= 0)
         {
-            std::cout << "Voce foi desconectado :(" << std::endl;
+            std::cout << BOLD << RED << "\n>> Voce foi desconectado :(" << RESET << std::endl;
             break; // sai do loop se perdeu conexão
         }
 
@@ -40,7 +41,7 @@ void send_messages(int clientSocket)
         int sendResult = send(clientSocket, message.c_str(), message.length(), 0);
         if (sendResult < 0)
         {
-            std::cout << "Ops, nao consegui enviar sua mensagem :/" << std::endl;
+            std::cout << BOLD << RED << "Ops, nao consegui enviar sua mensagem :/" << RESET << std::endl;
             break;
         }
     }
@@ -51,7 +52,7 @@ int main()
     int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (clientSocket < 0)
     {
-        std::cerr << "Ops, nao deu para criar socket :/" << std::endl;
+        std::cerr << BOLD << RED << "Ops, nao deu para criar socket :/" << RESET << std::endl;
         return 1;
     }
 
@@ -65,12 +66,12 @@ int main()
 
     if (connect(clientSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) < 0)
     {
-        std::cerr << "Ops, nao foi possivel conectar ao servidor :/" << std::endl;
+        std::cerr << BOLD << RED << "Ops, nao foi possivel conectar ao servidor :/" << RESET << std::endl;
         close(clientSocket);
         return 1;
     }
 
-    std::cout << "Voce esta conectado :D! Digite suas mensagens abaixo:" << std::endl;
+    std::cout << BOLD << BLUE << "Voce esta conectado :D! Digite suas mensagens abaixo:" << RESET << std::endl;
 
     // cria threads separadas, uma para enviar e a outra para receber
     std::thread receiverThread(receive_messages, clientSocket);

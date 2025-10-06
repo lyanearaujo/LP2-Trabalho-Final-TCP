@@ -5,6 +5,11 @@
 
 const size_t MAX_HISTORY_SIZE = 15;
 
+ChatRoom::ChatRoom()
+{
+    forbiddenWords = {"porra", "caralho", "buceta", "merda", "vai tomar no cu", "vai se fuder"};
+}
+
 void ChatRoom::addClient(std::shared_ptr<ClientHandler> client)
 {
     // bloquinho para garantir que o lock seja liberado o mais rápido possível
@@ -29,10 +34,11 @@ void ChatRoom::removeClient(std::shared_ptr<ClientHandler> client)
 
 void ChatRoom::broadcastMessage(const std::string& message, int senderSocket)
 {
+    std::string filteredMessage = filterMessage(message);
     std::scoped_lock lock(clientsMutex, historyMutex);
-    Logger::getInstance().log(LogLevel::INFO, "Broadcast da mensagem do socket " + std::to_string(senderSocket));
+    Logger::getInstance().log(LogLevel::INFO, "Broadcast da mensagem da Pessoa " + std::to_string(senderSocket));
 
-    messageHistory.push_back(message);
+    messageHistory.push_back(filteredMessage);
     if (messageHistory.size() > MAX_HISTORY_SIZE)
     {
         messageHistory.pop_front(); // histórico com tamanho fixo
@@ -43,7 +49,7 @@ void ChatRoom::broadcastMessage(const std::string& message, int senderSocket)
     {
         if (client->getSocket() != senderSocket)
         {
-            client->sendMessage(message);
+            client->sendMessage(filteredMessage);
         }
     }
 }
@@ -58,4 +64,20 @@ void ChatRoom::sendHistoryToClient(std::shared_ptr<ClientHandler> client)
         // prefixo para deixar claro que é mensagem antiga
         client->sendMessage("[HISTÓRICO] " + msg);
     }
+}
+
+std::string ChatRoom::filterMessage(const std::string& message)
+{
+    std::string filtered = message;
+    for (const auto& word : forbiddenWords)
+    {
+        size_t pos = filtered.find(word);
+        while (pos != std::string::npos)
+        {
+            // substitui a palavra por asteriscos do mesmo tamanho
+            filtered.replace(pos, word.length(), std::string(word.length(), '*'));
+            pos = filtered.find(word, pos + 1);
+        }
+    }
+    return filtered;
 }

@@ -208,7 +208,8 @@ CMakeFiles/test_logger.dir/src/logger.cpp.o: ../src/logger.cpp \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc
+  /usr/include/c++/11/bits/sstream.tcc \
+  ../include/colors.hpp
 
 CMakeFiles/test_logger.dir/src/test_logger.cpp.o: ../src/test_logger.cpp \
   /usr/include/stdc-predef.h \
@@ -442,6 +443,8 @@ CMakeFiles/test_logger.dir/src/test_logger.cpp.o: ../src/test_logger.cpp \
 /usr/include/c++/11/bits/std_thread.h:
 
 ../src/test_logger.cpp:
+
+../include/colors.hpp:
 
 /usr/include/c++/11/sstream:
 

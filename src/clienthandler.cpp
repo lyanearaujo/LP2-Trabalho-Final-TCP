@@ -29,7 +29,6 @@ void ClientHandler::handleMessages()
 
         if (bytesReceived <= 0)
         {
-            Logger::getInstance().log(LogLevel::WARNING, "Cliente " + std::to_string(clientSocket) + " desconectou. Tchauu!");
             break;
         }
         // repassa a mensagem para todos os clientes do chatroom

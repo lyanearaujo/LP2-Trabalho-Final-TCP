@@ -727,7 +727,8 @@ CMakeFiles/chat_server.dir/src/logger.cpp.o: ../src/logger.cpp \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc
+  /usr/include/c++/11/bits/sstream.tcc \
+  ../include/colors.hpp
 
 CMakeFiles/chat_server.dir/src/server.cpp.o: ../src/server.cpp \
   /usr/include/stdc-predef.h \
@@ -1255,6 +1256,8 @@ CMakeFiles/chat_server.dir/src/server_main.cpp.o: ../src/server_main.cpp \
 /usr/include/netinet/in.h:
 
 ../src/server.cpp:
+
+../include/colors.hpp:
 
 ../src/logger.cpp:
 

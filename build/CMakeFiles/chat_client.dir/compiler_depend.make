@@ -232,8 +232,11 @@ CMakeFiles/chat_client.dir/src/client_main.cpp.o: ../src/client_main.cpp \
   /usr/include/linux/close_range.h \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../include/colors.hpp
 
+
+../include/colors.hpp:
 
 /usr/include/string.h:
 

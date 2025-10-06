@@ -183,4 +183,5 @@ CMakeFiles/chat_client.dir/src/client_main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h /usr/include/c++/11/cstring \
- /usr/include/string.h /usr/include/strings.h
+ /usr/include/string.h /usr/include/strings.h \
+ /home/lyane/Documents/LPII/LP2-Trabalho-Final-TCP/include/colors.hpp
